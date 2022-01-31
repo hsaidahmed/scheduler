@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 import DayListItem from "./DayListItem";
 
 export default function DayList(props) {
-  return props.days.map(day => {
+  return props.days.map((day) => {
     return (
       <ul>
         <DayListItem
@@ -15,4 +15,4 @@ export default function DayList(props) {
       </ul>
     );
   });
-  }
+}
