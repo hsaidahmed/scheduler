@@ -14,29 +14,12 @@ export default function useVisualMode(initial) {
     }
   }
 
-  // const transition = (newMode, replace = false) => {
-  //   setMode(newMode);
-  //   if (replace) {
-  //     history.pop();
-  //     setHistory([...history]);
-      
-  //   }
-  //   setHistory((prev) => [...prev, newMode]);
-  // };
-
   const back = () => {
     if (history.length > 1) {
       setMode(history[history.length - 2]);
       setHistory(prev => [...prev.slice(0, prev.length - 1)])
     }
   }
-  // const back = () => {
-  //   if (history.length < 2) {
-  //     return;
-  //   }
-  //   history.pop();
-  //   setHistory([...history]);
-  //   setMode(history[history.length - 1]);
-  // };
+  
   return { mode, transition, back };
 }
